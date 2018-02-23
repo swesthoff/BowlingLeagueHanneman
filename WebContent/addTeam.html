@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action = "addTeamServlet" method = "post">
+	Team Name: <input type = "text" name = "teamName"><br />
+	Team Type: <select name = "teamType">
+		<option value = null></option>
+		<option value = soccer>Soccer</option>
+		<option value = basketball>Basketball</option>
+		<option value = baseball>Baseball</option>
+		<option value = football>Football</option>
+		<option value = volleyball>Volleyball<option>
+		<option value = tennis>Tennis</option>
+	</select><br />
+	Preferred Night: <select name = "preferredNight">
+		<option value = monday>Monday</option>
+		<option value = tuesday>Tuesday</option>
+		<option value = wednesday>Wednesday</option>
+		<option value = thursday>Thursday</option>
+		<option value = friday>Friday</option>
+		<option value = saturday>Saturday</option>
+		<option value = sunday>Sunday</option>
+	</select>
+	<input type="submit" value="Add Team">
+	</form>
+</body>
+</html>
