@@ -25,6 +25,10 @@ public class Team {
 		
 	}
 	
+	public Team(String name) {
+		this.setTeamName(name);
+	}
+	
 	public Team(String name, String type, String night) {
 		this.teamName = name;
 		this.teamType = type;
