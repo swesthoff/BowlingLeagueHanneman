@@ -25,6 +25,15 @@ public class Team {
 		
 	}
 	
+	public Team(int teamId, String teamName, String teamType, String preferredNight) {
+		super();
+		this.teamId = teamId;
+		this.teamName = teamName;
+		this.teamType = teamType;
+		this.preferredNight = preferredNight;
+	}
+
+
 	public Team(String name, String type, String night) {
 		this.teamName = name;
 		this.teamType = type;
