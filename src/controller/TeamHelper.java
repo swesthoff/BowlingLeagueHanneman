@@ -44,4 +44,24 @@ public class TeamHelper {
 		}
 
 	}
+
+	public Team searchForTeamById(int teamId) {
+		EntityManager em = emfactory.createEntityManager();
+		Team foundTeam = em.find(Team.class, teamId);
+		em.close();
+		return foundTeam;
+	}
+
+	public void deleteTeam(Team team) {
+		// TODO Auto-generated method stub
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		TypedQuery<Team> deleteTeam = em.createQuery("select t from Team t where t.teamId = :selectedId", Team.class);
+		deleteTeam.setParameter("selectedId", team.getTeamId());
+		deleteTeam.setMaxResults(1);
+		Team toDelete = deleteTeam.getSingleResult();
+		em.remove(toDelete);
+		em.getTransaction().commit();
+		em.close();
+	}
 }
